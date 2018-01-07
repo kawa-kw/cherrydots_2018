@@ -94,7 +94,7 @@ function runLogoAnimation() {
     // LOGO ANIMATION
     //---------------
     // logo vars
-    var $fullLogos = $('#sketch > *, #logo-border, #logo-color');
+    var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #dev-bcg-intro-color');
     var $logoSketch = $('#sketch');
     var $base1 = $('#base1');
     var $base2 = $('#base2');
