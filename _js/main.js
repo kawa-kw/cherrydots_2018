@@ -1,2 +1,7 @@
-console.log('jest bundle, ale czy się zmienia?')
-console.log('zmienia się, zmienia')
+import runLogoAnimation from './runLogoAnimation';
+
+$(document).ready(() => {
+
+    runLogoAnimation();
+    console.log('animacja działa? działa!');
+});
