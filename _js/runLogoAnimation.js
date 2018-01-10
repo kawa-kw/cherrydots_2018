@@ -57,5 +57,5 @@ export default function runLogoAnimation(){
         .to($bcgColor1, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.9')
         .to($('.js-intro-bcg'), 0.4, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.8')
         .to($('#dev-bcg-intro'), 0, {opacity: 0}, '-=1.2')
-        .to($('#bcg-3-float-3'), 60, {x:'+=200', y:'+=200'}, '-=.2')
+        .to($('#bcg-3-float-3'), 100, {x:'+=1000', y:'+=500'}, '-=.2')
 };
