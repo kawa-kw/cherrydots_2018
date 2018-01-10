@@ -3,15 +3,17 @@ export default function runLogoAnimation(){
     // GSAP vars https://greensock.com/docs/#/HTML5/GSAP/TimelineLite/
     var tl = new TimelineLite();
 
+    var width = $(window).width()
+
     //---------------
     // LOGO ANIMATION
     //---------------
     // logo vars
     var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #subtitle')
     var $bgcColorLayers = $('#dev-bcg-intro-color > *, .js-intro-bcg')
-    var $bcgColor1 = $('#dev-bcg-intro-color #bcg-1')
-    var $bcgColor2 = $('#dev-bcg-intro-color #bcg-2')
-    var $bcgColor3 = $('#dev-bcg-intro-color #bcg-3')
+    var $bcgColor1 = $('#dev-bcg-intro-color #bcg-1, #dev-bcg-intro-color #bcg-1-float-1, #dev-bcg-intro-color #bcg-1-float-2, #dev-bcg-intro-color #bcg-1-float-3, #dev-bcg-intro-color #bcg-1-float-4, #dev-bcg-intro-color #bcg-1-float-5')
+    var $bcgColor2 = $('#dev-bcg-intro-color #bcg-2, #dev-bcg-intro-color #bcg-2-float-1, #dev-bcg-intro-color #bcg-2-float-2, #dev-bcg-intro-color #bcg-2-float-3, #dev-bcg-intro-color #bcg-2-float-4, #dev-bcg-intro-color #bcg-2-float-5')
+    var $bcgColor3 = $('#dev-bcg-intro-color #bcg-3, #dev-bcg-intro-color #bcg-3-float-1, #dev-bcg-intro-color #bcg-3-float-2, #dev-bcg-intro-color #bcg-3-float-3')
     var $bcgColor4 = $('#dev-bcg-intro-color #bcg-4')
     var $logoSketch = $('#sketch');
     var $base1 = $('#base1');
@@ -53,6 +55,7 @@ export default function runLogoAnimation(){
         .to($bcgColor3, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=1.1')
         .to($bcgColor2, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=1')
         .to($bcgColor1, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.9')
-        .to($('.js-intro-bcg'), 0.2, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.8')
+        .to($('.js-intro-bcg'), 0.4, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.8')
         .to($('#dev-bcg-intro'), 0, {opacity: 0}, '-=1.2')
+        .to($('#bcg-3-float-3'), 60, {x:'+=200', y:'+=200'}, '-=.2')
 };
