@@ -7,8 +7,8 @@ export default function runLogoAnimation(){
     // LOGO ANIMATION
     //---------------
     // logo vars
-    var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #subtitle, .js-intro-bcg')
-    var $bgcColorLayers = $('#dev-bcg-intro-color > *')
+    var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #subtitle')
+    var $bgcColorLayers = $('#dev-bcg-intro-color > *, .js-intro-bcg')
     var $bcgColor1 = $('#dev-bcg-intro-color #bcg-1')
     var $bcgColor2 = $('#dev-bcg-intro-color #bcg-2')
     var $bcgColor3 = $('#dev-bcg-intro-color #bcg-3')
@@ -48,11 +48,11 @@ export default function runLogoAnimation(){
         .addLabel('sketchFade', '-=.5')
         .to($logoBorder, .5, {opacity: 0})
         .to($logoSketch, 2, {opacity: 0}, 'sketchFade')
-        .to($('#subtitle'), .5, {opacity: 1}, '-=1.7')
-        .to($bcgColor4, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)})
-        .to($bcgColor3, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.1')
-        .to($bcgColor2, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.2')
-        .to($bcgColor1, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.3')
-        .to($('.js-intro-bcg'), 0.2, {opacity: 1, ease: Back.easeOut})
-        .to($('#dev-bcg-intro'), 0, {opacity: 0}, '-=.4')
+        .to($('#subtitle'), .8, {opacity: 1}, '-=1.6')
+        .to($bcgColor4, 0.2, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=1.2')
+        .to($bcgColor3, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=1.1')
+        .to($bcgColor2, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=1')
+        .to($bcgColor1, 0.3, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.9')
+        .to($('.js-intro-bcg'), 0.2, {scale: 1, ease: Back.easeOut.config(1.4)}, '-=.8')
+        .to($('#dev-bcg-intro'), 0, {opacity: 0}, '-=1.2')
 };

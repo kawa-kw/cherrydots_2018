@@ -93,8 +93,8 @@ function runLogoAnimation() {
     // LOGO ANIMATION
     //---------------
     // logo vars
-    var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #subtitle, .js-intro-bcg');
-    var $bgcColorLayers = $('#dev-bcg-intro-color > *');
+    var $fullLogos = $('#sketch > *, #logo-border, #logo-color, #subtitle');
+    var $bgcColorLayers = $('#dev-bcg-intro-color > *, .js-intro-bcg');
     var $bcgColor1 = $('#dev-bcg-intro-color #bcg-1');
     var $bcgColor2 = $('#dev-bcg-intro-color #bcg-2');
     var $bcgColor3 = $('#dev-bcg-intro-color #bcg-3');
@@ -114,7 +114,7 @@ function runLogoAnimation() {
     var $logoBorder = $('#logo-border');
     var $logoColor = $('#logo-color');
 
-    tl.to($fullLogos, 0, { opacity: 0 }).to($bgcColorLayers, 0, { scale: 0, transformOrigin: 'center center' }).to($base1, 1, { opacity: 1, ease: Linear.easeOut }).to($base2, 1, { opacity: 1, ease: Linear.easeOut }).to($base3, 1, { opacity: 1, ease: Linear.easeOut }).to($lineSet1, .9, { opacity: 1, ease: Linear.easeOut }, '-=.1').to($lineSet2, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet3, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet4, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet5, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet6, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet7, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet8, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').addLabel('logoBorder', '+=1').to($logoBorder, 1, { opacity: 1, ease: Linear.easeOut }, 'logoBorder').addLabel('logoColor', '+=1.5').to($logoColor, 1, { opacity: 1, ease: Linear.easeOut }, 'logoColor').addLabel('sketchFade', '-=.5').to($logoBorder, .5, { opacity: 0 }).to($logoSketch, 2, { opacity: 0 }, 'sketchFade').to($('#subtitle'), .5, { opacity: 1 }, '-=1.7').to($bcgColor4, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }).to($bcgColor3, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=.1').to($bcgColor2, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=.2').to($bcgColor1, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=.3').to($('.js-intro-bcg'), 0.2, { opacity: 1, ease: Back.easeOut }).to($('#dev-bcg-intro'), 0, { opacity: 0 }, '-=.4');
+    tl.to($fullLogos, 0, { opacity: 0 }).to($bgcColorLayers, 0, { scale: 0, transformOrigin: 'center center' }).to($base1, 1, { opacity: 1, ease: Linear.easeOut }).to($base2, 1, { opacity: 1, ease: Linear.easeOut }).to($base3, 1, { opacity: 1, ease: Linear.easeOut }).to($lineSet1, .9, { opacity: 1, ease: Linear.easeOut }, '-=.1').to($lineSet2, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet3, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet4, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet5, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet6, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet7, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet8, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').addLabel('logoBorder', '+=1').to($logoBorder, 1, { opacity: 1, ease: Linear.easeOut }, 'logoBorder').addLabel('logoColor', '+=1.5').to($logoColor, 1, { opacity: 1, ease: Linear.easeOut }, 'logoColor').addLabel('sketchFade', '-=.5').to($logoBorder, .5, { opacity: 0 }).to($logoSketch, 2, { opacity: 0 }, 'sketchFade').to($('#subtitle'), .8, { opacity: 1 }, '-=1.6').to($bcgColor4, 0.2, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=1.2').to($bcgColor3, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=1.1').to($bcgColor2, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=1').to($bcgColor1, 0.3, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=.9').to($('.js-intro-bcg'), 0.2, { scale: 1, ease: Back.easeOut.config(1.4) }, '-=.8').to($('#dev-bcg-intro'), 0, { opacity: 0 }, '-=1.2');
 };
 
 /***/ })
