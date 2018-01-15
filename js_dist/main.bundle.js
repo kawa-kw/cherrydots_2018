@@ -70,11 +70,14 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__runLogoAnimation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__ = __webpack_require__(3);
+
 
 
 $(document).ready(() => {
 
     Object(__WEBPACK_IMPORTED_MODULE_0__runLogoAnimation__["a" /* default */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($(window), $('#dev-bcg-intro-color #bcg-1'), 1);
     console.log('animacja działa? działa!');
 });
 
@@ -119,6 +122,71 @@ function runLogoAnimation() {
 
     tl.to($fullLogos, 0, { opacity: 0 }).to($blueBcg, 0, { opacity: 0 }).to($bgcColorLayers, 0, { opacity: 0, scale: 0, transformOrigin: 'center center' }).to($base1, 1, { opacity: 1, ease: Linear.easeOut }).to($base2, 1, { opacity: 1, ease: Linear.easeOut }).to($base3, 1, { opacity: 1, ease: Linear.easeOut }).to($lineSet1, .9, { opacity: 1, ease: Linear.easeOut }, '-=.1').to($lineSet2, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet3, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet4, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet5, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet6, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet7, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').to($lineSet8, .9, { opacity: 1, ease: Linear.easeOut }, '-=.3').addLabel('logoBorder', '+=1').to($logoBorder, 1, { opacity: 1, ease: Linear.easeOut }, 'logoBorder').addLabel('logoColor', '+=1.2').to($logoColor, 1, { opacity: 1, ease: Linear.easeOut }, 'logoColor').addLabel('sketchFade', '-=.5').to($logoBorder, .5, { opacity: 0 }).to($logoSketch, 2, { opacity: 0 }, 'sketchFade').to($('#subtitle'), .8, { opacity: 1 }, '-=1.6').to($bcgColor4, .2, { opacity: 1, scale: 1, ease: Back.easeOut.config(1.4) }, '-=.4').to($bcgColor3, .3, { opacity: 1, scale: 1, ease: Back.easeOut.config(1.4) }, '-=.3').to($bcgColor2, .3, { opacity: 1, scale: 1, ease: Back.easeOut.config(1.4) }, '-=.2').to($bcgColor1, .3, { opacity: 1, scale: 1, ease: Back.easeOut.config(1.4) }, '-=.1').to($blueBcg, .3, { opacity: 1 }).to($('#dev-bcg-intro'), 0, { opacity: 0 }, '-=.4').to($('#bcg-3-float-3'), 100, { x: '+=1000', y: '+=500' }, '-=.2');
 };
+
+/***/ }),
+/* 2 */,
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = moveBcgLayer;
+// /*
+// * jquery-backgroundMove master by sameera liyanage
+// * License MIT
+// $('element').backgroundMove();
+// */
+// (function($){
+//     $.fn.backgroundMove=function(options){
+//             var defaults={
+//             movementStrength:'50'
+//         },
+//         options=$.extend(defaults,options);
+//
+//          var $this = $(this);
+//
+//            var movementStrength = options.movementStrength;
+//             var height = movementStrength / $(window).height();
+//             var width = movementStrength / $(window).width();
+//             $this.mousemove(function(e){
+//                       var pageX = e.pageX - ($(window).width() / 2);
+//                       var pageY = e.pageY - ($(window).height() / 2);
+//                       var newvalueX = width * pageX * -1 - 25;
+//                       var newvalueY = height * pageY * -1 - 50;
+//                       $this.css("background-position", newvalueX+"px     "+newvalueY+"px");
+//             });
+//
+//         }
+// })(jQuery);
+//
+function moveBcgLayer(bcg, layer, movementStrength) {
+    var window = $(window);
+    var dx = 0; // number of px to move layer on X axis
+    var dy = 0; // number of px to move layer on Y axis
+    var factor = 1 / (30 * movementStrength);
+
+    bcg.mousemove(function (event) {
+        var newX = window.width() / 2 - event.clientX;
+        var newY = window.height() / 2 - event.clientY;
+
+        console.log('moveBcgLayer działa', newX, newY);
+    });
+
+    function moveSingleLayer() {
+        dx += (newX * -1 - dx) * factor;
+        dy += (newY * -1 - dy) * factor;
+
+        translate = 'translate(' + dx + 'px, ' + dy + 'px) scale(1.1)';
+
+        layer.css({
+            '-webit-transform': translate,
+            '-moz-transform': translate,
+            'transform': translate
+        });
+
+        window.requestAnimationFrame(moveSingleLayer);
+        console.log('moveSingleLayer działa');
+    }
+}
 
 /***/ })
 /******/ ]);
