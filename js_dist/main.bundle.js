@@ -77,10 +77,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 $(document).ready(() => {
 
     Object(__WEBPACK_IMPORTED_MODULE_0__runLogoAnimation__["a" /* default */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($(window), $('#dev-bcg-intro-color #bcg-1'), 6);
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($(window), $('#dev-bcg-intro-color #bcg-2'), 8);
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($(window), $('#dev-bcg-intro-color #bcg-3'), 10);
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($(window), $('#dev-bcg-intro-color #bcg-4'), 12);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-1'), 10);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-2'), 10);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-3'), 30);
     console.log('animacja działa? działa!');
 });
 
@@ -136,27 +135,24 @@ function moveBcgLayer(bcg, layer, movementStrength) {
     var window = $(document);
     var dx = 0; // number of px to move layer on X axis
     var dy = 0; // number of px to move layer on Y axis
-    var factor = 1 / (30 * movementStrength);
+    var factor = 1 / (3 * movementStrength);
 
     bcg.mousemove(function (event) {
         var newX = window.width() / 2 - event.clientX;
         var newY = window.height() / 2 - event.clientY;
 
         function moveSingleLayer() {
-            dx += (newX - dx) * factor;
-            dy += (newY - dy) * factor;
-
-            if (Math.abs(dx) >= 50) {
-                dx = dx;
-                console.log('juz x jest max');
+            if (Math.abs(dx) >= 100) {
+                dx = 0;
+            } else {
+                dx = (newX - dx) * factor;
             }
 
             if (Math.abs(dy) >= 50) {
-                dy = dy;
-                console.log('juz y jest max');
+                dy = 0;
+            } else {
+                dy = (newY - dy) * factor;
             }
-
-            console.log(dx, dy);
 
             var translate = 'translate(' + dx + 'px, ' + dy + 'px)';
 
