@@ -92,6 +92,7 @@ $(document).ready(() => {
 function runLogoAnimation() {
 
     $('.js-intro-bcg-shapes').show().removeClass('hidden');
+    $('.js-main').removeClass('main--start');
 
     // GSAP vars https://greensock.com/docs/#/HTML5/GSAP/TimelineLite/
     var tl = new TimelineLite();
