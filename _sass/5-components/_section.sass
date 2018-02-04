@@ -1,4 +1,43 @@
 .section
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
 	max-width: $width-max-box
-	padding: $global-padding
+	padding: 150px $global-padding
 	margin: 50px auto
+
+	h1
+		+font($font-size-header, .9, 700, $font-serif)
+
+	h2
+		+font($font-size-header-main, .7, 700, $font-serif)
+
+	&__header
+		max-width: 50%
+		margin-right: 50px
+		text-align: right
+		color: rgba(#000, .2)
+
+		span
+			+font($family: $font-serif)
+			display: block
+
+	&__header--rotated
+		max-width: none
+		margin-right: 0
+		text-align: center
+		color: rgba(#000, .2)
+		transform: rotate(-90deg)
+
+	&__short
+		+font($font-size-short, $line-height-text)
+
+	&--contact
+		display: block
+
+		img
+			display: block
+			width: 200px
+			height: auto
+			margin: 0 auto
