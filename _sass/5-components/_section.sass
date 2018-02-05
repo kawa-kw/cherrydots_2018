@@ -8,19 +8,20 @@
 	margin: 50px auto
 
 	h1
-		+font($font-size-header, .9, 700, $font-serif)
+		+font($font-size-header, 1, 400)
 
 	h2
-		+font($font-size-header-main, .7, 700, $font-serif)
+		+font($font-size-header-main, 1, 300)
 
 	&__header
 		max-width: 50%
 		margin-right: 50px
 		text-align: right
+		text-transform: uppercase
+		letter-spacing: 2px
 		color: rgba(#000, .2)
 
 		span
-			+font($family: $font-serif)
 			display: block
 
 	&__header--rotated
@@ -35,9 +36,32 @@
 
 	&--contact
 		display: block
+		min-height: calc(100vh - 310px)
+		padding: 0
+		text-align: center
 
 		img
 			display: block
 			width: 200px
 			height: auto
+			margin: 0 auto 30px
+
+		h2
 			margin: 0 auto
+			text-align: center
+
+			&::after
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				border-radius: 10px
+				margin: 10px auto
+				background-color: $color-cherry
+
+		a
+			color: black
+			transition: all .2s ease
+
+			&:hover
+				color: $color-cherry
