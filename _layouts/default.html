@@ -4,9 +4,9 @@
 	<title>{% if page.title %}{{ page.title }} - {% endif %}Cherry Dots</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Cherry Dots">
+	<meta name="author" content="Cherry Dots Katarzyna Walenko">
+	<meta name="description" content="Cheer up yourself and cherry up your modern web product with Cherry Dots. Modern front-end developer, UX, UI designer.">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&amp;subset=latin-ext">
-	<link href="https://fonts.googleapis.com/css?family=Sahitya:700" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 	<link rel="shortcut icon" href="{{ site.baseurl }}img/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
 			<img src="{{ site.baseurl }}img/dots-accent-4.svg" class="accent--right">
 		</div>
 		<div class="accent accent--3">
-			<img src="{{ site.baseurl }}img/dots-accent-3.svg" class="accent--left">
+			<img src="{{ site.baseurl }}img/dots-accent-3.svg" class="accent--right">
 		</div>
 		<div class="accent accent--4">
 			<img src="{{ site.baseurl }}img/dots-accent.svg" class="accent--right">
@@ -36,19 +36,33 @@
 			<img src="{{ site.baseurl }}img/dots-accent-4.svg" class="accent--left">
 		</div>
 		<div class="accent accent--6">
-			<img src="{{ site.baseurl }}img/dots-accent-2.svg" class="accent--right">
+			<img src="{{ site.baseurl }}img/dots-accent-2.svg" class="accent--left">
 		</div>
 		{{ content }}
 	</main>
 
 	<footer class="main-footer">
-		<h3>Cherry Dots</h3>
-		<h3>Katarzyna Walenko</h3>
-
-		<a href="mailto:hello@cherrydots.pl">hello@cherrydots.pl</a>
-		<a href="tel:+48601551521">601 551 521</a>
-
-		<p>NIP: 716 262 70 81</p>
+		<h3>Cherry Dots Katarzyna Walenko</h3>
+		<div class="footer__contact">
+			<div class="footer__links">
+				<a href="mailto:hello@cherrydots.pl">hello@cherrydots.pl</a>
+				<a href="tel:+48601551521">601 551 521</a>
+				<p>NIP: 716 262 70 81</p>
+			</div>
+			<div class="footer__adress">
+				<p>Skarbka z Gor 122a/47</p>
+				<p>03-287 Warsaw</p>
+				<p>POLAND</p>
+			</div>
+		</div>
+		<div class="footer__social-media">
+			<a href="https://twitter.com/kawa_ally" class="footer__twitter" title="twitter" target="_blank"></a>
+			<a href="https://github.com/kawa-kw" class="footer__github" title="github" target="_blank"></a>
+		</div>
+	</footer>
+	<footer class="footer__add">
+		<span>2018. Crafted with joy by</span>
+		<img src="{{ site.baseurl }}img/logo-border.svg" alt="Cherry Dots">
 	</footer>
 
 	<script type="text/javascript" src="{{ site.baseurl }}js_dist/main.bundle.js"></script>
