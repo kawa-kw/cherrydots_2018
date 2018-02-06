@@ -1,10 +1,70 @@
 .main-footer
 	+font(10px)
 	padding: 30px 50px
-	text-align: right
+	width: 50%
+	margin: 0 auto
+	text-align: center
 	color: #fff
-	background-color: $color-blue
+	border-top: 1px solid rgba($color-blue, .1)
+
+	*
+		color: rgba($color-blue, .4)
 
 	a
 		display: block
-		color: #fff
+
+		&:hover
+			color: rgba($color-blue, .9)
+
+	.footer__contact
+		display: flex
+		justify-content: center
+		margin: 20px auto
+
+		.footer__links
+			margin-right: $global-padding * 3
+			text-align: left
+
+		.footer__adress
+			text-align: right
+
+	.footer__social-media a
+		+font($line-height: 37px)
+		display: inline-block
+		margin: 10px
+		width: 33px
+		height: 33px
+		border: 1px solid rgba($color-blue, .3)
+		border-radius: 100%
+		text-align: center
+		transition: .2s all ease
+
+		&.footer__twitter::before
+			+fa-icon($fa-twitter, 18px)
+
+		&.footer__github::before
+			+fa-icon($fa-github, 18px)
+
+.footer__add
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	padding: 10px
+	background-color: $color-blue
+
+	*
+		+font(12px)
+		color: rgba(#fff, .3)
+
+	span
+		margin-right: 8px
+
+		&::before
+			+fa-icon($fa-copyright)
+			margin-right: 5px
+
+	img
+		display: inline-block
+		height: 20px
+		width: auto
+		opacity: .3

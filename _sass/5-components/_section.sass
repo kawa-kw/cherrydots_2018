@@ -8,10 +8,13 @@
 	margin: 50px auto
 
 	h1
-		+font($font-size-header, 1, 400)
+		+font($font-size-header-main, 1, 400)
 
 	h2
-		+font($font-size-header-main, 1, 300)
+		+font($font-size-header, 1, 400)
+
+	h3
+		+font($font-size-header-regular, 1, 400)
 
 	&__header
 		max-width: 50%
@@ -19,7 +22,7 @@
 		text-align: right
 		text-transform: uppercase
 		letter-spacing: 2px
-		color: rgba(#000, .2)
+		//color: rgba(#000, .2)
 
 		span
 			display: block
@@ -28,7 +31,7 @@
 		max-width: none
 		margin-right: 0
 		text-align: center
-		color: rgba(#000, .2)
+		//color: rgba(#000, .2)
 		transform: rotate(-90deg)
 
 	&__short
@@ -36,7 +39,7 @@
 
 	&--contact
 		display: block
-		min-height: calc(100vh - 310px)
+		min-height: calc(100vh - 510px)
 		padding: 0
 		text-align: center
 
@@ -60,6 +63,7 @@
 				background-color: $color-cherry
 
 		a
+			display: block
 			color: black
 			transition: all .2s ease
 
