@@ -77,9 +77,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 $(document).ready(() => {
 
     Object(__WEBPACK_IMPORTED_MODULE_0__runLogoAnimation__["a" /* default */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('body'), $('#dev-bcg-intro-color #bcg-1'), 20);
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('body'), $('#dev-bcg-intro-color #bcg-2'), 20);
-    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('body'), $('#dev-bcg-intro-color #bcg-3'), 30);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-1'), 20);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-2'), 20);
+    Object(__WEBPACK_IMPORTED_MODULE_1__moveBcgLayer__["a" /* default */])($('.js-intro-bcg-shapes'), $('#dev-bcg-intro-color #bcg-3'), 30);
     console.log('animacja działa? działa!');
 });
 
