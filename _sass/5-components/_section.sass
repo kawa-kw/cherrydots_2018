@@ -1,39 +1,45 @@
 .section
 	position: relative
-	display: flex
-	justify-content: center
-	align-items: center
 	max-width: $width-max-box
 	padding: 150px $global-padding
 	margin: 50px auto
 
-	h1
-		+font($font-size-header-main, 1, 400)
-
-	h2
-		+font($font-size-header, 1, 400)
-
-	h3
-		+font($font-size-header-regular, 1, 400)
-
 	&__header
-		max-width: 50%
-		margin-right: 50px
+		+font($font-size-header, $line-height-header, 700)
+		margin-bottom: 50px
 		text-align: right
 		text-transform: uppercase
 		letter-spacing: 2px
+		color: rgba(#000, .4)
 
 		span
 			display: block
+			color: $color-cherry
 
-	&__header--rotated
-		max-width: none
-		margin-right: 0
-		text-align: center
-		transform: rotate(-90deg)
+		&--main
+			+font($font-size-header-main, $line-height-header, 700)
 
 	&__short
 		+font($font-size-short, $line-height-text)
+
+	&__list
+		padding-left: 20px
+		border-left: 1px dashed rgba($color-blue, .2)
+		margin-left: 20px
+
+		li
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				left: -30px
+				top: 5px
+				width: 20px
+				height: 20px
+				border: 1px dashed rgba($color-blue, .2)
+				border-radius: 100%
+				background-color: $color-bgc
 
 	&--about,
 	&--work-areas,
@@ -47,17 +53,28 @@
 		height: 180px
 
 	&--workflow
+		img
+			display: block
+			width: 100%
+			height: auto
+
 		.section-workflow__tools
 			position: absolute
 			z-index: -1
 			opacity: 0
 
-		img
-			display: block
-			width: 50vw
-			height: auto
+	&--work-areas,
+	&--priorities
+		display: flex
+		align-items: center
+		justify-content: center
 
+		.section__header
+			width: 50%
+			margin-right: $global-padding
 
+			span:not(:first-of-type)
+				color: rgba(#000, .4)
 
 	&--contact
 		display: flex
@@ -73,7 +90,7 @@
 			height: auto
 			margin: 0 auto 30px
 
-		h2
+		.section__header
 			margin: 0 auto
 			text-align: center
 
@@ -85,6 +102,9 @@
 				border-radius: 10px
 				margin: 10px auto
 				background-color: $color-cherry
+
+			span
+				display: inline-block
 
 		a
 			display: block
