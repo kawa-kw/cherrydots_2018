@@ -13,8 +13,17 @@
 		color: rgba(#000, .4)
 
 		span
-			display: block
+			position: relative
+			display: inline-block
 			color: $color-cherry
+
+			&::before
+				+center($left: 100%)
+				content: ''
+				height: 150px
+				width: 150px
+				border-radius: 100%
+				background-color: rgba($color-cherry, .2)
 
 		&--main
 			+font($font-size-header-main, $line-height-header, 700)
@@ -24,22 +33,12 @@
 
 	&__list
 		padding-left: 20px
-		border-left: 1px dashed rgba($color-blue, .2)
 		margin-left: 20px
 
 		li
+			+font(10px, $weight: 700)
 			position: relative
-
-			&::before
-				content: ''
-				position: absolute
-				left: -30px
-				top: 5px
-				width: 20px
-				height: 20px
-				border: 1px dashed rgba($color-blue, .2)
-				border-radius: 100%
-				background-color: $color-bgc
+			text-transform: uppercase
 
 	&--about,
 	&--work-areas,
@@ -76,6 +75,8 @@
 
 			span:not(:first-of-type)
 				color: rgba(#000, .4)
+				&::before
+					display: none
 
 	&--contact
 		display: flex
@@ -106,6 +107,10 @@
 
 			span
 				display: inline-block
+
+				&::before
+					width: 50px
+					height: 50px
 
 		a
 			display: block
