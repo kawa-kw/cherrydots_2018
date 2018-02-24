@@ -40,23 +40,7 @@
 			position: relative
 			text-transform: uppercase
 
-	&--priorities img
-		height: 180px
-
-	&--workflow
-		img
-			display: block
-			width: 70%
-			height: auto
-			margin: 0 auto
-
-		.section-workflow__tools
-			position: absolute
-			z-index: -1
-			opacity: 0
-
-	&--work-areas,
-	&--priorities
+	&--split
 		display: flex
 		align-items: center
 		justify-content: center
@@ -70,45 +54,3 @@
 
 				&::before
 					display: none
-
-	&--contact
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		min-height: calc(100vh - 510px)
-		padding: 0
-
-		img
-			display: block
-			width: 160px
-			height: auto
-			margin: 0 auto 30px
-
-		.section__header
-			margin: 0 auto
-			text-align: center
-
-			&::after
-				content: ''
-				display: block
-				width: 10px
-				height: 10px
-				border-radius: 10px
-				margin: 10px auto
-				background-color: $color-cherry
-
-			span
-				display: inline-block
-
-				&::before
-					width: 50px
-					height: 50px
-
-		a
-			display: block
-			color: black
-			transition: all .2s ease
-
-			&:hover
-				color: $color-cherry
