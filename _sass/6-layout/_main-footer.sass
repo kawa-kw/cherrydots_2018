@@ -1,11 +1,18 @@
 .main-footer
 	+font(11px)
-	padding: 30px 50px
-	width: 50%
+	padding: 30px 10px
+	width: 95%
 	margin: 0 auto
 	text-align: center
 	color: $color-white
 	border-top: 1px solid rgba($color-blue, .1)
+
+	+media(s)
+		width: 70%
+
+	+media(m)
+		width: 50%
+		padding: 30px 50px
 
 	*
 		color: rgba($color-blue, .4)
