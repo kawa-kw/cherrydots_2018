@@ -16,12 +16,21 @@
 		img
 			position: relative
 			display: block
-			height: 250px
-			width: auto
+			height: auto
+			width: 20vw
+			opacity: .5
+
+			+media(m)
+				height: 250px
+				width: auto
+				opacity: 1
 
 		&--left
-			left: -30px
+			left: -20px
 			margin: 0 auto 0 0
+
+			+media(m)
+				left: -30px
 
 		&--right
 			margin: 0 0 0 auto
@@ -30,8 +39,11 @@
 			top: 35%
 
 			img
-				right: -50px
+				right: -15px
 				transform: rotate(-180deg)
+
+				+media(m)
+					right: -40px
 
 		&--3
 			top: 95%

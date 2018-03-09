@@ -17,13 +17,14 @@
 			display: inline-block
 			color: $color-cherry
 
-			&::before
-				+center($left: 100%)
-				content: ''
-				height: 150px
-				width: 150px
-				border-radius: 100%
-				background-color: rgba($color-cherry, .2)
+			+media(m)
+				&::before
+					+center($left: 100%)
+					content: ''
+					height: 150px
+					width: 150px
+					border-radius: 100%
+					background-color: rgba($color-cherry, .2)
 
 		&--main
 			+font($font-size-header-main, $line-height-header, 700)
@@ -31,9 +32,11 @@
 	&__short
 		+font($font-size-short, $line-height-text)
 
+		+media(s)
+			+font($font-size-short-wide, $line-height-text)
+
 	&__list
 		padding-left: 20px
-		margin-left: 20px
 
 		li
 			+font(10px, $weight: 700)
@@ -42,7 +45,7 @@
 
 	&--split
 		display: flex
-		align-items: center
+		align-items: flex-start
 		justify-content: center
 
 		.section__header
