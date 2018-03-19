@@ -1,6 +1,7 @@
 .section
 	position: relative
-	max-width: $width-max-box
+	width: 100%
+	max-width: $width-max-box - 100px
 	padding: 150px $global-padding
 	margin: 50px auto
 
@@ -35,8 +36,12 @@
 		+media(s)
 			+font($font-size-short-wide, $line-height-text)
 
+		+media(l)
+			+font($font-size-short-wide-max, $line-height-text)
+
 	&__list
 		padding-left: 20px
+		width: 40%
 
 		li
 			+font(10px, $weight: 700)
@@ -47,6 +52,7 @@
 		display: flex
 		align-items: flex-start
 		justify-content: center
+		max-width: $width-max-box
 
 		.section__header
 			width: 50%
