@@ -4,7 +4,7 @@
 
 	svg
 		+center
-		width: 95vw
+		width: 70vw
 		height: auto
 		max-width: 1500px
 		padding: 30px
@@ -16,17 +16,23 @@
 		left: 0
 		right: 0
 		height: 100vh
-		background-color: $color-blue
+		//background-color: $color-blue
 
 	+media(xs, -100px, $orientation: portrait)
+		overflow: hidden
+
 		svg
 			+center($top: 50%, $left: 65%, $transformX: -65%, $transformY: -50%)
 			width: 170vw
 			height: auto
 
-	+media(s, -100px)
+	+media(s)
 		svg
 			+center
-			width: 95vw
+			width: 70vw
 			max-width: 1500px
 			padding: 30px
+
+	+media(l)
+		svg
+			width: 50vw
