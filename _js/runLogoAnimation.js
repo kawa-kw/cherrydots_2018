@@ -16,7 +16,8 @@ export default function runLogoAnimation(){
     const $bcgColor2 = $('#dev-bcg-intro-color #bcg-2, #dev-bcg-intro-color #bcg-2-float-1, #dev-bcg-intro-color #bcg-2-float-2, #dev-bcg-intro-color #bcg-2-float-3, #dev-bcg-intro-color #bcg-2-float-4, #dev-bcg-intro-color #bcg-2-float-5')
     const $bcgColor3 = $('#dev-bcg-intro-color #bcg-3, #dev-bcg-intro-color #bcg-3-float-1, #dev-bcg-intro-color #bcg-3-float-2, #dev-bcg-intro-color #bcg-3-float-3')
     const $bcgColor4 = $('#dev-bcg-intro-color #bcg-4')
-    const $blueBcg = $('.js-intro-bcg')
+    const $blueBcg = $('.js-intro-bcg');
+    const $underBcg = $('.js-under-bcg-shapes');
     const $logoSketch = $('#sketch');
     const $base1 = $('#base1');
     const $base2 = $('#base2');
@@ -34,6 +35,7 @@ export default function runLogoAnimation(){
 
     tl.to($fullLogos, 0, {opacity: 0})
         .to($blueBcg, 0, {opacity: 0})
+        .to($underBcg, 0, {opacity: 0})
         .to($bgcColorLayers, 0, {opacity: 0, scale: 0, transformOrigin: 'center center'})
         .to($base1, .4, {opacity: 1, ease: Linear.easeOut})
         .to($base2, .4, {opacity: 1, ease: Linear.easeOut})
@@ -59,6 +61,7 @@ export default function runLogoAnimation(){
         .to($bcgColor2, .2, {opacity: 1, scale: 1, ease: Back.easeOut.config(1.4)}, '-=.2')
         .to($bcgColor1, .2, {opacity: 1, scale: 1, ease: Back.easeOut.config(1.4)}, '-=.1')
         .to($blueBcg, .2, {opacity: 1})
+        .to($underBcg, .1, {opacity: 1})
         .to($('#dev-bcg-intro'), 0, {opacity: 0}, '-=.4')
         .to($('#bcg-3-float-3'), 100, {x:'+=1000', y:'+=500'}, '-=.2')
 };
