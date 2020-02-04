@@ -1,16 +1,56 @@
-.section--workflow
-	img
+.section-workflow__tools
+	position: absolute
+	z-index: -1
+	opacity: 0
+
+.section--projects
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		max-width: 37.5rem  //600px
+		margin: 5rem auto -5rem  //80px auto -80px
+
+		li
+			position: relative
+
+	&__link
 		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 9.38rem  //150px
+		height: 9.38rem  //150px
+		border-radius: 100%
+		margin: 1.25rem  //20px
+		box-shadow: 0 0 .63rem .13rem rgba($color-black, .1)
+
+		&:hover .section--projects__img
+			transform: scale(1.1)
+			opacity: 1
+
+	&__img
 		display: block
-		width: 100%
+		width: auto
 		height: auto
-		margin: 0 auto
-		z-index: -2
+		max-width: 5rem  //80px
+		max-height: 5rem  //80px
+		transition: all .2s ease
+		opacity: .7
 
-		+media(s)
-			width: 70%
-
-	.section-workflow__tools
+	&__bullet
+		+font(.75rem, $weight: 700)
+		display: flex
+		align-items: center
 		position: absolute
-		z-index: -1
-		opacity: 0
+		top: 1.88rem  //30px
+		right: 0
+		padding: 0 1rem
+		border-radius: 1.88rem  //30px
+		color: $color-bgc
+		background-color: $color-blue
+
+	&__svg
+		display: block
+		height: 1rem  //16px
+		margin-right: .31rem  //5px
